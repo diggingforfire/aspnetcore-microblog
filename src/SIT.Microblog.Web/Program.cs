@@ -2,15 +2,15 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace Microblog.Web
+namespace SIT.Microblog.Web
 {
-	public class Program
-	{
-		public static void Main(string[] args)
-		{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
 			var config = new ConfigurationBuilder()
 				.SetBasePath(Directory.GetCurrentDirectory())
-				.AddJsonFile("hosting.json", optional: true)
+				.AddJsonFile("hosting.json", true)
 				.Build();
 
 			var host = new WebHostBuilder()
@@ -22,5 +22,5 @@ namespace Microblog.Web
 
 			host.Run();
 		}
-	}
+    }
 }
